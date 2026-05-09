@@ -20,7 +20,7 @@ export default function Footer() {
         }
       `}} />
 
-      {/* 1. Background Laser Beam (Moving Effect) */}
+      {/* 1. Background Laser Beam */}
       <div className="absolute top-0 left-0 w-full h-1 z-0 overflow-hidden">
         <div 
           className="w-1/3 h-full bg-gradient-to-r from-transparent via-[#e63946] to-transparent"
@@ -34,52 +34,38 @@ export default function Footer() {
       {/* --- CONTENT AREA --- */}
       <div className="relative z-10 max-w-7xl mx-auto px-8">
         
-        {/* UPPER SECTION: Focused Branding & Direct Contact */}
+        {/* UPPER SECTION: Operational Branding */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-12 mb-24">
           <div className="max-w-2xl">
             <Link to="/" className="flex mb-5 items-center select-none group">
               <span
                 className="text-3xl flex items-center gap-2 font-black tracking-[0.25em] transition-all duration-300 group-hover:tracking-[0.35em]"
-                style={{
-                  letterSpacing: "0.25em"
-                }}
               >
                 <img src={logo} className="h-14" alt="Dyzen Labs Logo" />
-                
-                {/* Fallback gradient text if image fails */}
-                {/* <span
-                  style={{
-                    background: "linear-gradient(to right, #ff2d78, #00d4ff)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent"
-                  }}
-                >
-                  DYZEN LABS
-                </span> */}
               </span>
             </Link>
             
             <h3 className="text-2xl md:text-3xl text-white font-bold leading-tight mb-4">
-              Building the future of software, <br/> 
-              <span className="text-white/40">focusing on clean execution.</span>
+              Executing production-grade software, <br/> 
+              <span className="text-white/40">optimized for rapid deployment.</span>
             </h3>
             <p className="text-white/30 text-lg font-medium max-w-md">
-              Based in Jaipur, setting up frameworks to handle modern digital scale.
+              Based in Jaipur, deploying high-performance infrastructures to handle modern digital scale.
             </p>
           </div>
 
-          {/* Direct CTA/Email Box */}
+          {/* Direct Support Box - Sounds more operational than just "Contact" */}
           <div className="w-full lg:w-auto">
             <Link 
               to={"/contact"}
               className="group flex items-center justify-between gap-8 p-6 rounded-3xl bg-white/[0.03] border border-white/[0.08] hover:bg-white/[0.06] transition-all duration-500"
             >
               <div className="flex flex-col">
-                <span className="text-[10px] font-bold text-white/30 uppercase tracking-[0.2em] mb-1">Send a Message</span>
-                <Link to={"/contact"} className="text-lg font-bold text-white flex items-center gap-2">
+                <span className="text-[10px] font-bold text-white/30 uppercase tracking-[0.2em] mb-1">Technical Support</span>
+                <div className="text-lg font-bold text-white flex items-center gap-2">
                   <Mail size={16} className="text-[#e63946]" /> 
                   contact@dyzenlabsdigital.in
-                </Link>
+                </div>
               </div>
               <div className="w-12 h-12 rounded-2xl bg-[#e63946] flex items-center justify-center transition-transform group-hover:rotate-[-45deg]">
                 <ArrowRight color="white" size={20} />
@@ -88,7 +74,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* MIDDLE SECTION: Horizontal Links Bar (Modern Layout) */}
+        {/* MIDDLE SECTION: Synchronized Links Bar */}
         <div className="flex flex-wrap items-center justify-between gap-8 py-10 border-y border-white/[0.05]">
           <div className="flex flex-wrap gap-x-10 gap-y-4">
             <Link
@@ -98,13 +84,13 @@ export default function Footer() {
               Home
             </Link>
             
-            {/* Using the updated unique page names from the Header */}
+            {/* UPDATED: Matches the new product-focused navigation */}
             {[
-              { label: "Our Builds", path: "/builds" },
-              { label: "Capabilities", path: "/capabilities" },
-              { label: "The Dyzen Story", path: "/story" },
-              { label: "Join Dyzen", path: "/careers" },
-              { label: "Reach Us", path: "/contact" }
+              { label: "Platform", path: "/platform" },
+              { label: "Solutions", path: "/solutions" },
+              { label: "Documentation", path: "/docs" },
+              { label: "Company", path: "/company" },
+              { label: "Contact", path: "/contact" }
             ].map((item) => (
               <Link 
                 key={item.label}
@@ -128,17 +114,16 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* BOTTOM SECTION: Legal & Copyright */}
+        {/* BOTTOM SECTION: Legal */}
         <div className="flex flex-col md:flex-row items-center justify-center pt-10 gap-6">
           <p className="text-[11px] text-white/20 font-bold uppercase tracking-widest">
             © {new Date().getFullYear()} DYZEN LABS PRIVATE LIMITED
           </p>
-          
         </div>
 
       </div>
 
-      {/* Decorative Gradient Blob (Bottom Left) */}
+      {/* Decorative Gradient Blob */}
       <div 
         className="absolute -bottom-[20%] -left-[10%] w-[500px] h-[500px] rounded-full blur-[120px] pointer-events-none z-0"
         style={{ 

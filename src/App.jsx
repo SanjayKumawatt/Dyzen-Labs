@@ -9,6 +9,10 @@ import Story from './Pages/Story'
 import Careers from './Pages/Career'
 import Contact from './Pages/Contact'
 import { ReactLenis } from 'lenis/react';
+import Platform from './Pages/Platform'
+import Solutions from './Pages/Solutions'
+import Docs from './Pages/Docs'
+import Company from './Pages/Company'
 const App = () => {
 
   const router = createBrowserRouter([
@@ -22,21 +26,37 @@ const App = () => {
           element: <Home />
         },
         {
-          path: "/builds",
-          element: <Builds />
+          path: "/platform",
+          element: <Platform />
         },
         {
-          path: "/capabilities",
-          element: <Capabilities />
+          path: "/solutions",
+          element: <Solutions />
         },
         {
-          path: "/story",
-          element: <Story />
+          path: "/docs",
+          element: <Docs />
         },
         {
-          path: "/careers",
-          element: <Careers />
+          path: "/company",
+          element: <Company />
         },
+        // {
+        //   path: "/builds",
+        //   element: <Builds />
+        // },
+        // {
+        //   path: "/capabilities",
+        //   element: <Capabilities />
+        // },
+        // {
+        //   path: "/story",
+        //   element: <Story />
+        // },
+        // {
+        //   path: "/careers",
+        //   element: <Careers />
+        // },
         {
           path: "/contact",
           element: <Contact />
