@@ -110,7 +110,7 @@ export default function Docs() {
               <CodeSnippet 
                 title="Quick Start: Ping the Engine" 
                 language="bash"
-                code={`curl -X GET "https://api.dyzenlabsdigital.in/v1/health" \\
+                code={`curl -X GET "[API_BASE_URL]/v1/health" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`} 
               />

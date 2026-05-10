@@ -248,32 +248,7 @@ export default function Solutions() {
       </section>
 
       {/* 5. MEASURABLE ROI MATRIX */}
-      <section className="py-32 bg-white/[0.01] border-y border-white/[0.05]">
-        <div className="max-w-7xl mx-auto px-8">
-          <FadeIn>
-            <div className="mb-20 text-center">
-              <h2 className="text-4xl md:text-5xl font-black mb-6">Quantifiable Output.</h2>
-              <p className="text-white/40 text-lg">We measure success purely by operational metrics and efficiency gains.</p>
-            </div>
-          </FadeIn>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-              { stat: "99.98%", label: "System Uptime", desc: "Maintained consistently across our multi-cloud deployment architecture." },
-              { stat: "0.00%", label: "Manual Errors", desc: "Logic-driven automation eliminates the margin of human data-entry error." },
-              { stat: "< 100ms", label: "Execution Latency", desc: "Real-time processing ensures your business reacts instantly to market signals." },
-              { stat: "10x", label: "Operational Scale", desc: "Scale your output without scaling your administrative headcount." }
-            ].map((item, i) => (
-              <FadeIn key={i} delay={i * 0.1}>
-                <div className="p-8 h-full rounded-3xl bg-[#0a0d17] border border-white/5 text-center flex flex-col justify-center">
-                  <h4 className="text-4xl font-black text-white mb-4">{item.stat}</h4>
-                  <p className="text-[12px] font-bold text-[#00d4ff] uppercase tracking-widest mb-4">{item.label}</p>
-                  <p className="text-white/30 text-[13px] leading-relaxed">{item.desc}</p>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       {/* 6. FINAL CTA - Direct and Professional */}
       <section className="py-40 relative text-center">

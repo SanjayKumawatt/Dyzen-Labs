@@ -58,7 +58,7 @@ export default function Platform() {
     },
     {
       title: "Cloud Infrastructure Sync",
-      description: "Native integration for multi-cloud environments. Our platform maintains state-consistency across AWS, Azure, and GCP, ensuring your operations remain continuous and fail-safe.",
+      description: "Native integration for multi-cloud environments. Our platform maintains state-consistency across Azure, and GCP, ensuring your operations remain continuous and fail-safe.",
       icon: <Cloud className="text-[#00d4ff]" size={28} />,
       status: "Operational"
     },
