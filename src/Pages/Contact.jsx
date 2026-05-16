@@ -50,7 +50,7 @@ export default function Contact() {
   return (
     <div className="bg-[#04060c] min-h-screen text-white font-['Syne',sans-serif] selection:bg-[#00d4ff] selection:text-black relative">
       
-      {/* MODERN PREMIUM TOAST NOTIFICATION (Functionality Kept Intact) */}
+      {/* MODERN PREMIUM TOAST NOTIFICATION */}
       <AnimatePresence>
         {showToast && (
           <motion.div
@@ -64,13 +64,13 @@ export default function Contact() {
             </div>
             <div>
               <h4 className="font-bold text-[15px] mb-0.5">Transmission Successful</h4>
-              <p className="text-white/50 text-[13px]">Our engineering team will review your specs and respond within 72 hours.</p>
+              <p className="text-white/50 text-[13px]">Our engineering team will review your specs and respond shortly.</p>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
 
-      {/* 1. ENTERPRISE HERO SECTION */}
+      {/* 1. HERO SECTION - Honest Startup Vibe */}
       <section className="pt-40 pb-12 px-8 border-b border-white/[0.05]">
         <div className="max-w-7xl mx-auto">
           <FadeIn>
@@ -79,13 +79,13 @@ export default function Contact() {
               <span className="text-[11px] font-bold tracking-[0.3em] text-white/40 uppercase">Integration Request</span>
             </div>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-[1.1] tracking-tight mb-6">
-              Initiate <br />
+              Start Your <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/40">
-                Deployment.
+                Integration.
               </span>
             </h1>
             <p className="text-xl text-white/50 max-w-2xl leading-relaxed">
-              Our engineering team is available to scope your operational bottlenecks and design a custom infrastructure deployment. Submit your technical requirements below to initiate a system audit.
+              Our engineering team is ready to review your technical bottlenecks and discuss how our modular logic can scale your operations. Submit your core requirements below.
             </p>
           </FadeIn>
         </div>
@@ -96,23 +96,23 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-8">
           <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
             
-            {/* LEFT COLUMN: Clean Corporate Details */}
+            {/* LEFT COLUMN: Clean Contact Details */}
             <div className="w-full lg:w-4/12 flex flex-col gap-12">
               <FadeIn direction="right">
                 <div>
                   <h3 className="text-2xl font-bold mb-8">Engineering Support</h3>
                   <div className="space-y-6">
                     <div>
-                      <h4 className="text-[11px] font-bold tracking-[0.2em] text-white/30 uppercase mb-2">Encrypted Channel</h4>
+                      <h4 className="text-[11px] font-bold tracking-[0.2em] text-white/30 uppercase mb-2">Direct Channel</h4>
                       <div className="flex items-center gap-3 text-lg font-bold text-white">
                         <Mail className="text-[#e63946]" size={20} />
-                        contact@dyzenlabsdigital.in
+                        contact@dyzenlabs.com
                       </div>
                     </div>
                     
                     <div className="pt-6 border-t border-white/[0.05]">
-                      <h4 className="text-[11px] font-bold tracking-[0.2em] text-white/30 uppercase mb-3">SLA Guarantee</h4>
-                      <p className="text-[#00d4ff] font-bold text-[15px]">Audit responses guaranteed within 3 working days.</p>
+                      <h4 className="text-[11px] font-bold tracking-[0.2em] text-white/30 uppercase mb-3">Response Time</h4>
+                      <p className="text-[#00d4ff] font-bold text-[15px]">Technical audit responses typically within 48-72 hours.</p>
                     </div>
                   </div>
                 </div>
@@ -135,7 +135,7 @@ export default function Contact() {
               </FadeIn>
             </div>
 
-            {/* RIGHT COLUMN: THE ENTERPRISE FORM */}
+            {/* RIGHT COLUMN: THE STARTUP-HONEST FORM */}
             <div className="w-full lg:w-8/12">
               <FadeIn direction="left">
                 <div className="p-8 md:p-12 rounded-[2rem] bg-[#0a0d17] border border-white/[0.05]">
@@ -148,50 +148,49 @@ export default function Contact() {
                           type="text" 
                           required
                           className="w-full bg-[#04060c] border border-white/10 rounded-xl px-5 py-4 text-white placeholder:text-white/20 focus:outline-none focus:border-[#00d4ff]/50 transition-colors"
-                          placeholder="Authorized Representative Name"
+                          placeholder="Your Name"
                         />
                       </div>
                       <div className="space-y-2">
-                        <label className="text-[12px] font-bold tracking-wider text-white/50 uppercase ml-1">Corporate Email</label>
+                        <label className="text-[12px] font-bold tracking-wider text-white/50 uppercase ml-1">Work Email</label>
                         <input 
                           type="email" 
                           required
                           className="w-full bg-[#04060c] border border-white/10 rounded-xl px-5 py-4 text-white placeholder:text-white/20 focus:outline-none focus:border-[#00d4ff]/50 transition-colors"
-                          placeholder="you@enterprise.com"
+                          placeholder="you@company.com"
                         />
                       </div>
                     </div>
 
                     <div className="space-y-2">
-                      <label className="text-[12px] font-bold tracking-wider text-white/50 uppercase ml-1">Infrastructure Scale</label>
+                      <label className="text-[12px] font-bold tracking-wider text-white/50 uppercase ml-1">Current Scale</label>
                       <select 
                         required
                         className="w-full bg-[#04060c] border border-white/10 rounded-xl px-5 py-4 text-white appearance-none focus:outline-none focus:border-[#00d4ff]/50 transition-colors cursor-pointer"
                         defaultValue=""
                       >
                         <option value="" disabled>Select your current operational tier</option>
-                        <option value="enterprise">Enterprise / Large Scale</option>
-                        <option value="scaling_saas">Scaling SaaS / Tech Platform</option>
+                        <option value="scaling_saas">Scaling Tech Platform / SaaS</option>
                         <option value="agency">Digital Agency / High Volume</option>
                         <option value="startup">Early-Stage Startup</option>
-                        <option value="other">Other Operations</option>
+                        <option value="custom">Custom Operations / Retail</option>
                       </select>
                     </div>
 
                     <div className="space-y-2">
-                      <label className="text-[12px] font-bold tracking-wider text-white/50 uppercase ml-1">Operational Requirements</label>
+                      <label className="text-[12px] font-bold tracking-wider text-white/50 uppercase ml-1">Technical Requirements</label>
                       <textarea 
                         required
                         rows="5"
                         className="w-full bg-[#04060c] border border-white/10 rounded-xl px-5 py-4 text-white placeholder:text-white/20 focus:outline-none focus:border-[#00d4ff]/50 transition-colors resize-none"
-                        placeholder="Detail your current infrastructure and the operational bottlenecks you need automated..."
+                        placeholder="Detail your current tech stack and the specific bottlenecks you need automated..."
                       ></textarea>
                     </div>
 
                     <button 
                       type="submit" 
                       disabled={isSubmitting}
-                      className="mt-4 flex items-center justify-center gap-3 w-full bg-white text-black font-black text-[14px] tracking-widest py-6 rounded-xl hover:bg-blue-500 hover:text-white transition-all disabled:opacity-70 disabled:cursor-not-allowed group"
+                      className="mt-4 flex items-center justify-center gap-3 w-full bg-white text-black font-black text-[14px] tracking-widest py-6 rounded-xl hover:bg-[#00d4ff] hover:text-white transition-all disabled:opacity-70 disabled:cursor-not-allowed group"
                     >
                       {isSubmitting ? (
                         <>

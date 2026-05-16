@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion"; 
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Activity, Terminal, Database } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const NetworkCanvas = () => {
@@ -74,7 +74,7 @@ const NetworkCanvas = () => {
 export default function Hero() {
   return (
     <section
-      className="pt-20 relative min-h-screen bg-[#07090f] overflow-hidden flex flex-col items-center justify-center"
+      className="pt-24 pb-12 relative min-h-screen bg-[#07090f] overflow-x-hidden flex flex-col items-center justify-center"
       style={{ fontFamily: "'Syne', sans-serif" }}
     >
       <style dangerouslySetInnerHTML={{ __html: `
@@ -94,6 +94,7 @@ export default function Hero() {
              style={{ background: "radial-gradient(circle, rgba(120,20,80,0.35) 0%, transparent 70%)", animation: "breathe 10s ease-in-out infinite 2s" }} />
       </div>
 
+      {/* ORIGINAL ANIMATION RESTORED */}
       <NetworkCanvas />
 
       <div className="absolute inset-0 pointer-events-none"
@@ -103,9 +104,9 @@ export default function Hero() {
            style={{ background: "linear-gradient(90deg, transparent, rgba(255,45,120,0.12), rgba(0,212,255,0.1), transparent)" }} />
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-5xl mx-auto px-8 text-center flex flex-col items-center">
+      <div className="relative z-10 w-full max-w-5xl mx-auto px-8 text-center flex flex-col items-center mt-12">
         
-        {/* Eyebrow - Focus on Operational SaaS */}
+        {/* Eyebrow */}
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
@@ -115,7 +116,7 @@ export default function Hero() {
           SaaS Infrastructure · AI Deployed Systems · Jaipur HQ
         </motion.p>
 
-        {/* H1 Headings - Concrete & Product Focused */}
+        {/* H1 Headings */}
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -136,7 +137,7 @@ export default function Hero() {
           </span>
         </motion.h1>
 
-        {/* Subtext - Removed "being built", kept the length same */}
+        {/* Subtext */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -146,12 +147,12 @@ export default function Hero() {
           Rigid systems restrict your business operations. Dyzen Labs provides a modular ecosystem of AI-driven tools and cloud infrastructure modules that integrate directly into your operational workflow today.
         </motion.p>
 
-        {/* CTA Buttons - Operational Actions */}
+        {/* CTA Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.68, duration: 0.6 }}
-          className="flex flex-wrap justify-center items-center gap-4"
+          className="flex flex-wrap justify-center items-center gap-4 mb-16"
         >
           <Link
             to="/platform"
@@ -168,22 +169,66 @@ export default function Hero() {
             View Documentation
           </Link>
         </motion.div>
+
+        {/* CODED DASHBOARD "JUGAAD" - Matte Finish & Startup Honest */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.85, duration: 0.8 }}
+          className="w-full max-w-4xl mx-auto rounded-xl border border-white/10 bg-[#0d1117]/80 backdrop-blur-md overflow-hidden shadow-2xl text-left"
+        >
+          {/* Dashboard Header */}
+          <div className="w-full h-10 bg-[#161b22] border-b border-white/5 flex items-center px-4 justify-between">
+            <div className="flex gap-2">
+              <div className="w-3 h-3 rounded-full bg-[#ff5f56]"></div>
+              <div className="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
+              <div className="w-3 h-3 rounded-full bg-[#27c93f]"></div>
+            </div>
+            <div className="text-[11px] font-mono text-white/40 tracking-wider">dyzen-core-telemetry</div>
+          </div>
+
+          {/* Dashboard Body */}
+          <div className="p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            {/* Main Graph Area */}
+            <div className="md:col-span-2 space-y-4">
+              <div className="flex items-center gap-2 text-sm font-semibold text-white/80">
+                <Activity size={16} className="text-[#e63946]" /> System Operations
+              </div>
+              <div className="h-40 bg-white/5 rounded-lg border border-white/5 p-4 flex items-end gap-3 relative">
+                <span className="absolute top-4 left-4 text-[10px] font-mono text-white/30">Active Nodes (Mock)</span>
+                {/* Fake Bar Chart */}
+                <motion.div animate={{ height: ["40%", "45%", "40%"] }} transition={{ repeat: Infinity, duration: 3 }} className="w-full bg-[#e63946]/20 rounded-t-sm"></motion.div>
+                <motion.div animate={{ height: ["60%", "50%", "60%"] }} transition={{ repeat: Infinity, duration: 4 }} className="w-full bg-[#b5179e]/20 rounded-t-sm"></motion.div>
+                <motion.div animate={{ height: ["80%", "85%", "80%"] }} transition={{ repeat: Infinity, duration: 2 }} className="w-full bg-[#7209b7]/30 rounded-t-sm"></motion.div>
+                <motion.div animate={{ height: ["50%", "55%", "50%"] }} transition={{ repeat: Infinity, duration: 3.5 }} className="w-full bg-[#e63946]/20 rounded-t-sm"></motion.div>
+                <motion.div animate={{ height: ["70%", "65%", "70%"] }} transition={{ repeat: Infinity, duration: 2.5 }} className="w-full bg-[#b5179e]/20 rounded-t-sm"></motion.div>
+              </div>
+            </div>
+
+            {/* Side Terminal/Logs */}
+            <div className="space-y-4">
+              <div className="flex items-center gap-2 text-sm font-semibold text-white/80">
+                <Terminal size={16} className="text-[#00d4ff]" /> Console
+              </div>
+              <div className="h-40 bg-black/60 rounded-lg border border-white/5 p-4 font-mono text-[11px] text-green-400/80 space-y-2 overflow-hidden">
+                <p className="text-white/40">[{new Date().toLocaleTimeString()}]</p>
+                <p>&gt; init dyzen_workflow...</p>
+                <p>&gt; connecting database...</p>
+                <p className="text-blue-400">&gt; status: high_availability</p>
+                <p>&gt; routing traffic...</p>
+                <motion.p 
+                  animate={{ opacity: [1, 0] }} 
+                  transition={{ repeat: Infinity, duration: 0.8 }}
+                >_</motion.p>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
       </div>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2, duration: 0.8 }}
-        className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center"
-      >
-        <motion.div
-          animate={{ y: [0, 5, 0] }}
-          transition={{ repeat: Infinity, duration: 1.6, ease: "easeInOut" }}
-          className="w-px h-7"
-          style={{ background: "linear-gradient(to bottom, rgba(230,57,70,0.5), transparent)" }}
-        />
-      </motion.div>
-
+      {/* Decorative fade at bottom */}
       <div className="absolute bottom-0 left-0 w-full h-28 pointer-events-none"
            style={{ background: "linear-gradient(to top, #07090f, transparent)" }} />
     </section>
